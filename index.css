@@ -1,3 +1,16 @@
+* {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    font-family: 'Merriweather', serif;
+}
 body {
     padding: 30px;
+    background-color:#f0f8fa;
+    text-align:center;
+}
+main {
+    background-color:#8bb3bd;
+    margin:15px auto;
+    max-width: 900px;
 }
