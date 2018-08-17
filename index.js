@@ -4,12 +4,20 @@ const URL_FLICKR = "https://api.flickr.com/services/rest?jsoncallback=?";
 let JSONRequest = "https://api.fda.gov/food/enforcement.json?api_key:&search=product_description:\"ice+cream\"&limit=25"
 
 function getDataFromRecallAPI(searchTerm, callback) {
-    const query = {
+    
+    const settings = {
+    url: endpoint,
+    data: {
         api_key: 'F1QzPnq38QWsSLQzgprkG2UGycgQsqF7QMw4UWx6',
         search: `product_description:${searchTerm}`,
         limit: 25
+        },
+    dataType: 'json',
+    type: 'GET',
+    success: callback,
+    error: ifNoResults()
     }
-    $.getJSON(endpoint, query, callback);
+    $.ajax(settings)
 }
 
 
@@ -41,25 +49,20 @@ function displayRecallData(data) {
         renderResults(data.results[i])
     }*/
     const result = data.results.map((item, index) => renderRecallResult(item));
-    const noResults = `
-     <h3>No Results</h3>
-     <div class = "js-no-results"><img src=
-     "https://3playmedia-wpengine.netdna-ssl.com/wp-content/uploads/cat-research.jpg" 
-     alt="Cat With Magnifying Glass"></div>
-     `;
-<<<<<<< HEAD
-     
-     $('.js-results').html(result);
-=======
-   
-    if (object.values(data.error)[0]  == "No matches found!") {
-     $('.js-results').html(noResults)
-    }
-    else {
-     $('.js-results').html(result)
-    }
->>>>>>> 9afaa27c52bddd71d4f81e83db82327d89a58f2e
+    $('.js-results').html(result);
 }
+
+function ifNoResults() {
+    const noResults = `
+    <h3>No Results</h3>
+    <div class = "js-no-results"><img src=
+    "https://3playmedia-wpengine.netdna-ssl.com/wp-content/uploads/cat-research.jpg" 
+    alt="Cat With Magnifying Glass"></div>
+    `;
+    $('.js-results').html(noResults);
+}
+
+
 //work on this
 /* function displayFlickrData(data) {
     const result = data.items.map((item, index) => )
