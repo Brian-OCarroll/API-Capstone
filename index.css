@@ -14,3 +14,7 @@ main {
     margin:15px auto;
     max-width: 900px;
 }
+
+.hidden {
+    visibility: hidden;
+}

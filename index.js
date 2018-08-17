@@ -47,8 +47,18 @@ function displayRecallData(data) {
      "https://3playmedia-wpengine.netdna-ssl.com/wp-content/uploads/cat-research.jpg" 
      alt="Cat With Magnifying Glass"></div>
      `;
+<<<<<<< HEAD
      
      $('.js-results').html(result);
+=======
+   
+    if (object.values(data.error)[0]  == "No matches found!") {
+     $('.js-results').html(noResults)
+    }
+    else {
+     $('.js-results').html(result)
+    }
+>>>>>>> 9afaa27c52bddd71d4f81e83db82327d89a58f2e
 }
 //work on this
 /* function displayFlickrData(data) {
