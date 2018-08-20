@@ -15,6 +15,6 @@ main {
     max-width: 900px;
 }
 
-.hidden {
-    visibility: hidden;
+.js-google-pic {
+    margin:20px 0;
 }
