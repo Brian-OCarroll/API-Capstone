@@ -16,7 +16,7 @@ function getDataFromRecallAPI(searchTerm, callback) {
     dataType: 'json',
     type: 'GET',
     success: callback,
-    error: ifNoResults()
+    error: ifNoResults
     }
     $.ajax(recallQuery)
 }
@@ -36,9 +36,9 @@ function getDataFromGoogleAPI(searchTerm, callback) {
 
 function renderRecallResult(result) {
     return `
-    <h3>${result.product_description}</h3>
+    <div class="recall-results"><h3>${result.product_description}</h3>
     <p>${result.product_quantity}</p>
-    <p>${result.reason_for_recall}</p>
+    <p>${result.reason_for_recall}</p> </div>
     `
 }
 
@@ -70,6 +70,7 @@ function ifNoResults() {
     alt="Cat With Magnifying Glass"></div>
     `;
     $('.js-results').html(noResults);
+    $('.js-google-pic').hide();
 }
 
 function onSubmit() {
