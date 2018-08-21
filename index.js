@@ -80,7 +80,8 @@ function onSubmit() {
     const query = queryTarget.val();
     queryTarget.val("");
     getDataFromRecallAPI(query, displayRecallData);
-    getDataFromGoogleAPI(query, displayGoogleImage)
+    getDataFromGoogleAPI(query, displayGoogleImage);
+    $('main').prop('hidden', false);
    });
 }
 $(onSubmit);
