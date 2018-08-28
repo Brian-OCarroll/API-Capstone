@@ -2,8 +2,13 @@
     box-sizing:border-box;
     padding:0;
     margin:0;
-    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', sans-serif;
 }
+
+h1 {
+    margin-bottom:15px;
+}
+
 body {
     padding: 30px;
     background-color:#f0f8fa;
@@ -13,8 +18,84 @@ main {
     background-color:#8bb3bd;
     margin:15px auto;
     max-width: 900px;
+    padding:0 15px;
 }
 
 .js-google-pic {
+    padding-top:20px;
     margin:20px 0;
 }
+
+.recall-results {
+    border: 3px solid #cc6356;
+    padding: 5px;
+    margin-bottom:5px;
+}
+
+/*.js-product-description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+    overflow: hidden
+}*/
+@media only screen and (min-width:700px) {
+/* styles for '...' */ 
+.js-product-description { 
+    overflow: hidden;
+    position: relative; 
+    line-height: 1.2em;
+    max-height: 2.4em; 
+    text-align: center;  
+    /*margin-right: -1em;*/
+    padding-right: 1em;
+  }
+  /* create the ... */
+  .js-product-description:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  /* hide ... if we have text, which is less than or equal to max lines */
+  .js-product-description:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: #8bb3bd;
+  }
+}
+@media only screen and (max-width:699px) {
+    /* styles for '...' */ 
+.js-product-description { 
+    overflow: hidden;
+    position: relative; 
+    line-height: 1.2em;
+    max-height: 4.8em; 
+    text-align: center;  
+    /*margin-right: -1em;*/
+    padding-right: 1em;
+  }
+  /* create the ... */
+  .js-product-description:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  /* hide ... if we have text, which is less than or equal to max lines */
+  .js-product-description:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: #8bb3bd;
+}
+}
+/*css text overflow*/
+/*    text-overflow: ellipsis;*/

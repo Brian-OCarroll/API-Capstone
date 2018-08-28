@@ -36,7 +36,7 @@ function getDataFromGoogleAPI(searchTerm, callback) {
 
 function renderRecallResult(result) {
     return `
-    <div class="recall-results"><h3>${result.product_description}</h3>
+    <div class="recall-results"><h3 class="js-product-description">${result.product_description}</h3>
     <p>${result.product_quantity}</p>
     <p>${result.reason_for_recall}</p> </div>
     `
@@ -55,6 +55,9 @@ function displayRecallData(data) {
     }*/
     const result = data.results.map((item, index) => renderRecallResult(item));
     $('.js-results').html(result);
+    //show results result =data.results[0]
+    //set 2 variables, first for initial.
+    //next to iterate it.
 }
 
 function displayGoogleImage(data) {
@@ -76,15 +79,18 @@ function ifNoResults() {
 function onSubmit() {
    $('.js-search-form').on('submit', function(event){
     event.preventDefault(event);
-    const queryTarget = $(this).find('.js-query');
+    const queryTarget = $(this).find('#js-query');
     const query = queryTarget.val();
     queryTarget.val("");
     getDataFromRecallAPI(query, displayRecallData);
     getDataFromGoogleAPI(query, displayGoogleImage);
     $('main').prop('hidden', false);
+    $('.js-multipage').prop('hidden', false);
    });
 }
 $(onSubmit);
+
+
 
 
 

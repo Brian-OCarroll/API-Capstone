@@ -9,21 +9,26 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
     
-    <h1>Check If Your Food Has Been Recalled Here</h1>
-    <form action="#" class="js-search-form">
+    <h1>Food Recall Alert Search</h1>
+    <form action="#" class="js-search-form" placeholder="banana">
         <label for="js-query">Enter a Product Name</label>
-        <input type="text" class="js-query">
+        <input type="text" id="js-query">
         <button type="submit">Search</button>
     </form>
-    <main role="main">
+    <main role="main" aria-live="assertive" hidden>
     <div class="js-google-pic"></div>
     <div class="js-results">
         <h2>Results</h2>
+    </div>
+    <div class="js-multipage" hidden>
+        <button class="js-load-more">Load More Results</button>
     </div>
     </main> 
     <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
+
