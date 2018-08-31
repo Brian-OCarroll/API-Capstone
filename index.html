@@ -13,10 +13,10 @@
 </head>
 <body>
     
-    <h1>Food Recall Alert Search</h1>
-    <form action="#" class="js-search-form" placeholder="banana">
+    <h1 id="js-scroll-top">Food Recall Alert Search</h1>
+    <form action="#" class="js-search-form">
         <label for="js-query">Enter a Product Name</label>
-        <input type="text" id="js-query">
+        <input type="text" id="js-query" placeholder="banana">
         <button type="submit">Search</button>
     </form>
     <main role="main" aria-live="assertive" hidden>
@@ -25,7 +25,7 @@
         <h2>Results</h2>
     </div>
     <div class="js-multipage" hidden>
-        <button class="js-load-more">Load More Results</button>
+        <button class="js-load-more">Show Next 10 Results</button>
     </div>
     </main> 
     <script type="text/javascript" src="index.js"></script>

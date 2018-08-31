@@ -17,7 +17,7 @@ body {
 main {
     background-color:#8bb3bd;
     margin:15px auto;
-    max-width: 900px;
+    max-width: 1000px;
     padding:0 15px;
 }
 
@@ -28,8 +28,23 @@ main {
 
 .recall-results {
     border: 3px solid #cc6356;
-    padding: 5px;
+    padding: 8px;
     margin-bottom:5px;
+}
+p {
+    margin-top:4px;
+    font-size:18px;
+}
+.js-load-more {
+    margin: 1.1vh;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: lightsteelblue;
+    font-size: 1em;
+}
+
+.js-load-more:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 1px 25px 0 rgba(0,0,0,0.19);
 }
 
 /*.js-product-description {

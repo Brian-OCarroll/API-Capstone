@@ -3,15 +3,16 @@ const URL_FLICKR = "https://api.flickr.com/services/rest?jsoncallback=?";
 const URL_GOOGLE = 'https://www.googleapis.com/customsearch/v1'
 //change product description to user input
 let JSONRequest = "https://api.fda.gov/food/enforcement.json?api_key:&search=product_description:\"banana\"&limit=25"
-
+let skip = 0;
 function getDataFromRecallAPI(searchTerm, callback) {
-    
+    console.log(searchTerm)
     const recallQuery = {
     url: URL_FDA,
     data: {
         api_key: 'F1QzPnq38QWsSLQzgprkG2UGycgQsqF7QMw4UWx6',
         search: `product_description:${searchTerm}`,
-        limit: 25
+        limit: 10,
+        skip: skip
         },
     dataType: 'json',
     type: 'GET',
@@ -49,7 +50,7 @@ function renderGoogleImage(result) {
 }
 
 function displayRecallData(data) {
-    
+    console.log(data)
     /*for (let i =0; i<data.results[i];i++) {
         renderResults(data.results[i])
     }*/
@@ -74,6 +75,7 @@ function ifNoResults() {
     `;
     $('.js-results').html(noResults);
     $('.js-google-pic').hide();
+    $('.js-load-more').hide();
 }
 
 function onSubmit() {
@@ -90,6 +92,11 @@ function onSubmit() {
 }
 $(onSubmit);
 
+$('.js-load-more').on('click', function(){
+skip= skip+10;
+getDataFromRecallAPI('banana', displayRecallData);
+document.body.scrollTop = document.documentElement.scrollTop = 0;
+});
 
 
 
