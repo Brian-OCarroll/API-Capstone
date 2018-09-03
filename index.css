@@ -19,7 +19,14 @@ main {
     margin:15px auto;
     max-width: 1000px;
     padding:0 15px;
+   
 }
+/*.js-results {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
+}*/
 
 .js-google-pic {
     padding-top:20px;
@@ -112,5 +119,7 @@ p {
     background: #8bb3bd;
 }
 }
+
+
 /*css text overflow*/
 /*    text-overflow: ellipsis;*/
