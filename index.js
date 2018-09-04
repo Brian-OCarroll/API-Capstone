@@ -62,8 +62,12 @@ function displayRecallData(data) {
 }
 
 function displayGoogleImage(data) {
+    console.log(data);
+    if(data.items) {
     const result = data.items.map((item, index) => renderGoogleImage(item));
     $('.js-google-pic').html(result);
+    }
+    
 }
 
 function ifNoResults() {
