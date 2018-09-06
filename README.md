@@ -8,15 +8,15 @@
 
 
 ### Landing Page
-![Alt text](images/Capture1?raw=true "Title")
+![Alt text](/images/Capture1?raw=true "Title")
 
 
 ### Landing Page w/ Rendered Results
-![Screenshot](/images/Capture2.png)
+![Screenshot2](/images/Capture2.png)
 
 
 ### Landing Page w/ No Results
-![Screenshot](/images/Capture3.png)
+![Screenshot3](/images/Capture3.png)
 
 
 ### SUMMARY:
