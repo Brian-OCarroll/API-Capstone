@@ -8,7 +8,7 @@
 
 
 ### Landing Page
-![ScreenShot](/images/Capture1.png)
+![Alt text](images/Capture1?raw=true "Title")
 
 
 ### Landing Page w/ Rendered Results
