@@ -12,11 +12,11 @@
 
 
 ### Landing Page w/ Rendered Results
-![Screenshot2](/images/Capture2.png)
+![Screenshot2](/images/Capture2.PNG)
 
 
 ### Landing Page w/ No Results
-![Screenshot3](/images/Capture3.png)
+![Screenshot3](/images/Capture3.PNG)
 
 
 ### SUMMARY:
