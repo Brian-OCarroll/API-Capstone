@@ -26,6 +26,7 @@ The goal of Recalled is to give the user peace of mind with what they eat. User'
 ### Third Party API's:
 
 Google Custom Search API
+
 FDA API
 
 ### Technology Used:
