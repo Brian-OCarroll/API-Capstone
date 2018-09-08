@@ -6,19 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search Recalled Items</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-    
-    <h1 id="js-scroll-top">Food Recall Alert Search</h1>
+ <header role="banner">
+    <h1 id="js-scroll-top">Recalled</h1>
+    <p class="landing-text"><strong> Search for your favorite food brand or ingredient here to see if it's been recalled.</strong></p>
     <form action="#" class="js-search-form">
-        <label for="js-query">Enter a Product Name</label>
-        <input type="text" id="js-query" placeholder="protein powder">
-        <button class="search-submit"type="submit">Search</button>
+        <label for="js-query"><strong>Search Here</strong></label>
+        <div class="search-bar">
+            <input type="text" id="js-query" placeholder="yogurt">
+            <button type="submit" class="search-submit" aria-label="search button"><span class="fa fa-search fa-xlg"></span></button>
+        </div>
     </form>
+ </header>
     <main role="main" aria-live="assertive" hidden>
     <div class="js-google-pic"></div>
     <div class="js-results">

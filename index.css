@@ -7,20 +7,95 @@
 
 h1 {
     margin-bottom:15px;
+    font-size:2em;
+}
+html {
+    height:100%
+}
+body {
+    margin-top:0;
+	margin-left: 2%;
+	margin-right: 2%;
+   /* background-color:#f0f8fa;*/
+    text-align:center;
+    background:linear-gradient(to bottom,
+     rgba(255, 255, 255, 0.83),
+     rgba(255, 255, 255, 0)),
+     url("https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    background-attachment: fixed;
+    height:100%;
 }
 
-body {
-    padding: 30px;
-    background-color:#f0f8fa;
-    text-align:center;
+/*.background-image {
+    background-image:url("https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    opacity:0.2;
+    position:absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:-1;
+}*/
+header {
+    color:black;
+    height: 30vh;
+    width: 104%;
+    margin-left: -2%;
+    min-height: 150px;
+    max-height: 250px;
+    margin-top:5%;
 }
 main {
-    background-color:#8bb3bd;
+    background-color:rgb(139,179,189,.75);
     margin:15px auto;
-    max-width: 1000px;
     padding:0 15px;
-   
+    border-radius: 5px;
+    max-width: 1200px;
 }
+
+
+label {
+    display:block;
+    margin-bottom:5px;
+}
+.search-bar {
+	font-size: 0;
+	height: 100%;
+	width: 100%;
+}
+input {
+	width: 25%;
+	height: 50%;
+    color: black;
+    background-color:rgb(173, 191, 202,.3) ;
+	min-width: 230px;
+	border-style: none;
+	border-radius: 10px 0 0 10px;
+	padding-left: 1.5%;
+}
+.js-search-form {
+    height: 40%;
+	width: 100%;
+}
+
+.search-submit {
+    color: black;
+    border-left: none;
+    background-color: rgb(173, 191, 202); 
+    border-style: none;
+    border-radius: 0 10px 10px 0;
+    height:50%;
+    
+}
+
 
 .js-google-pic {
     padding-top:20px;
@@ -28,14 +103,21 @@ main {
 }
 
 .recall-results {
-    border: 3px solid #cc6356;
+    border-bottom: 3px solid #cc6356;
     padding: 8px;
     margin-bottom:5px;
 }
-p {
+
+.js-product-data {
     margin-top:4px;
     font-size:18px;
 }
+
+.landing-text, label {
+    margin-bottom:5px;
+    font-size:18px;
+}
+
 .js-load-more {
     margin: 1.1vh;
     padding: 5px;
@@ -48,7 +130,9 @@ p {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 1px 25px 0 rgba(0,0,0,0.19);
 }
 
-
+.landing-text form {
+    font-size:18px;
+}
 @media only screen and (min-width:700px) {
 /* styles for '...' */ 
 .js-product-description { 
@@ -75,7 +159,7 @@ p {
     width: 1em;
     height: 1em;
     margin-top: 0.2em;
-    background: #8bb3bd;
+    background: rgb(173, 191, 202,.3) ;
   }
 }
 @media only screen and (max-width:699px) {
@@ -104,7 +188,7 @@ p {
     width: 1em;
     height: 1em;
     margin-top: 0.2em;
-    background: #8bb3bd;
+    background: rgb(173, 191, 202,.3) ;
 }
 }
 

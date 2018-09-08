@@ -6,7 +6,7 @@ function getDataFromRecallAPI(searchTerm, callback) {
     url: URL_FDA,
     data: {
         api_key: 'F1QzPnq38QWsSLQzgprkG2UGycgQsqF7QMw4UWx6',
-        search: `product_description:${searchTerm}`,
+        search: `product_description:"${searchTerm}"`,
         limit: 10,
         skip: skip
         },
@@ -21,7 +21,7 @@ function getDataFromRecallAPI(searchTerm, callback) {
 function getDataFromGoogleAPI(searchTerm, callback) {
     const googleQuery = {
         key: 'AIzaSyCPr8TWECg0liCnewSMRPPBxNaceX4sNZY',
-        q: `${searchTerm}`,
+        q: `${searchTerm}+image`,
         searchType: 'image',
         cx: '005740929295477467170:javy9zvt87m',
         safe: 'active',
@@ -34,8 +34,8 @@ function getDataFromGoogleAPI(searchTerm, callback) {
 function renderRecallResult(result) {
     return `
     <div class="recall-results"><h3 class="js-product-description">${result.product_description}</h3>
-    <p>${result.product_quantity}</p>
-    <p>${result.reason_for_recall}</p> </div>
+    <p class="js-product-data">${result.product_quantity}</p>
+    <p class="js-product-data">${result.reason_for_recall}</p> </div>
     `
 }
 
