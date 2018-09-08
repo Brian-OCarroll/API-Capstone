@@ -2,21 +2,21 @@
 # Recalled
 
 
-### Live link to WebApp: https://brian-ocarroll.github.io/API-Capstone/
+### Live link to WebApp: https://brian-ocarroll.github.io/Recalled/
 
 
 
 
 ### Landing Page
-![ScreenShot](/images/Capture1.png)
+![Screenshot1](/images/Capture1.PNG)
 
 
 ### Landing Page w/ Rendered Results
-![Screenshot](/images/Capture2.png)
+![Screenshot2](/images/Capture2.PNG)
 
 
 ### Landing Page w/ No Results
-![Screenshot](/images/Capture3.png)
+![Screenshot3](/images/Capture3.PNG)
 
 
 ### SUMMARY:
@@ -26,6 +26,7 @@ The goal of Recalled is to give the user peace of mind with what they eat. User'
 ### Third Party API's:
 
 Google Custom Search API
+
 FDA API
 
 ### Technology Used:
